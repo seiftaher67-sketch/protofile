@@ -13,8 +13,8 @@ document.querySelectorAll('a, button, .project-card').forEach(el => {
     el.addEventListener('mouseleave', () => cursor.style.transform = 'scale(1) rotate(0deg)');
 });
 
-// Typing animation for hero subtitle
-function typeWriter(element, text, speed = 100) {
+// Name typing effect + Hero stagger animations
+function typeWriter(element, text, speed = 80) {
     let i = 0;
     element.innerHTML = '';
     function type() {
@@ -22,25 +22,107 @@ function typeWriter(element, text, speed = 100) {
             element.innerHTML += text.charAt(i);
             i++;
             setTimeout(type, speed);
+        } else {
+            // Start stagger animations after typing
+            setTimeout(() => triggerHeroAnimations(), 500);
         }
     }
     type();
 }
 
+function triggerHeroAnimations() {
+    // Skip #bio-short to let 3s timeout handle it
+    document.querySelectorAll('[class*="hero-delay-"]').forEach(el => {
+        if (!el.id || el.id !== 'bio-short') {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        }
+    });
+}
+
+// Bio toggle functionality
+// Bio toggle removed as per feedback
+
+// Photo hover tilt effect
+function initPhotoTilt() {
+    const heroImageContainer = document.querySelector('.hero-image-container');
+    if (heroImageContainer) {
+        heroImageContainer.addEventListener('mousemove', (e) => {
+            const rect = heroImageContainer.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+
+            heroImageContainer.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        heroImageContainer.addEventListener('mouseleave', () => {
+            heroImageContainer.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+        });
+    }
+}
+
+// Intersection Observer for hero reveal on scroll (fallback)
+function initHeroObserver() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '-100px 0px 0px 0px'
+    };
+
+    const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('[class*="hero-delay-"]').forEach((el, index) => {
+                    setTimeout(() => {
+                        el.style.opacity = '1';
+                        el.style.transform = 'translateY(0)';
+                    }, index * 150);
+                });
+                heroObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        heroObserver.observe(heroSection);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    const subtitle = document.querySelector('.subtitle');
-    if (subtitle) {
-        typeWriter(subtitle, subtitle.textContent);
+    // Name typing effect
+    const nameElement = document.querySelector('.name');
+    if (nameElement) {
+        typeWriter(nameElement.parentElement, nameElement.parentElement.textContent);
     }
 
-    // Hero delay animation after 3 seconds with stagger
+    // initBioToggle(); // Removed as undefined
+    initPhotoTilt();
+    initHeroObserver();
+
+    // Dynamic description reveal after exactly 3 seconds (as per task)
     setTimeout(() => {
-        document.querySelectorAll('.hero-delay').forEach((el, index) => {
-            setTimeout(() => {
-                el.classList.add('animate-hero');
-            }, index * 200);
-        });
+        const desc = document.getElementById('bio-short');
+        if (desc) {
+            desc.style.display = 'block';
+            desc.style.opacity = '1';
+            desc.style.transform = 'translateY(0) scale(1)';
+            desc.style.textShadow = '0 4px 20px rgba(255, 255, 255, 0.3)';
+            desc.style.boxShadow = '0 10px 30px rgba(31, 122, 140, 0.4)';
+            console.log('Bio paragraph revealed after 3 seconds - direct style override');
+        }
     }, 3000);
+
+    // Keep existing subtitle typing if needed (backup)
+    const subtitles = document.querySelectorAll('.subtitle:not(.typing-text)');
+    subtitles.forEach(subtitle => {
+        if (subtitle.textContent.trim()) {
+            setTimeout(() => typeWriter(subtitle, subtitle.textContent, 120), 2000);
+        }
+    });
 });
 
 // Mobile navbar toggle
@@ -188,4 +270,15 @@ if (aboutSection) {
 //         hero.style.transform = `translateY(${scrolled * 0.5}px)`;
 //     }
 // });
+
+
+// Parallax effect for hero DISABLED - user requested static hero section
+// window.addEventListener('scroll', () => {
+//     const scrolled = window.pageYOffset;
+//     const hero = document.querySelector('.hero');
+//     if (hero) {
+//         hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+//     }
+// });
+
 

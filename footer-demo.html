@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Demo - Exact Provided Code</title>
+    <style>
+        /* EXACT PROVIDED CSS - NO CHANGES */
+        .footer-container {
+            position: relative;
+            width: 100%;
+            height: 750px;
+            border-top: none;
+            background: linear-gradient(to bottom, #333333, #1F7A8C);
+            padding: 20px 0;
+        }
+
+        #logoftoer {
+            margin-top: 50px;
+            margin-right: 80px;
+            width: 291px;
+            height: 161px;
+        }
+
+        #logoftoer img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #decfooter {
+            color: #FBFBFB;
+            margin-top: 80px;
+            margin-right: 80px;
+            font-family: Cairo, sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: right;
+        }
+
+        #decfooter h2 {
+            margin-bottom: 12px;
+        }
+
+        #footerlink {
+            color: whitesmoke;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: 25px;
+            display: block;
+        }
+
+        #footerlink h2 {
+            font-family: 'El Messiri', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 150%;
+            text-align: right;
+        }
+
+        #footerlink p {
+            font-family: Cairo, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 100%;
+            text-align: right;
+            margin-bottom: 12px;
+            cursor: pointer;
+        }
+
+        #footerconect {
+            color: whitesmoke;
+            position: absolute;
+            top: 60%;
+            left: 10%;
+            transform: translateY(-50%);
+            margin-top: 25px;
+            display: block;
+        }
+
+        #footerconect h2 {
+            font-family: 'El Messiri', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 250%;
+            text-align: right;
+        }
+
+        #footerconect p {
+            font-family: Cairo, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 100%;
+            text-align: right;
+            margin-bottom: 12px;
+        }
+
+        #footerconect a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        #footerconect img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 24px;
+            height: 24px;
+            margin-left: 2px;
+        }
+
+        .footer-images {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: -7px;
+            margin-left: 7px;
+        }
+
+        .footer-images img {
+            margin-right: 12px;
+            margin-top: 15px;
+        }
+
+        #socal {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-top: 50px;
+        }
+
+        .copyright {
+            font-family: Cairo, sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: right;
+            color: #FBFBFB;
+            margin-top: 0px;
+            margin-right: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 80px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                min-height: 650px;
+            }
+
+            #logoftoer {
+                margin-top: 30px;
+                margin-right: 30px;
+            }
+
+            #decfooter {
+                margin-top: 40px;
+                margin-right: 30px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .copyright {
+                margin-right: 30px;
+                font-size: 12px;
+            }
+
+            .footer-bottom {
+                margin-right: 30px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            hr {
+                margin-right: 30px;
+                margin-left: 30px;
+                width: calc(100% - 60px);
+            }
+        }
+
+        hr {
+            margin-top: 10px;
+            margin-bottom: 0;
+            width: calc(100% - 160px);
+            margin-right: 80px;
+            margin-left: 80px;
+        }
+
+        /* Hover effects */
+        .footer-container img {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .footer-container img:hover {
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.5)) brightness(1.2);
+            transform: scale(1.1);
+        }
+
+        .footer-container a {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .footer-container a:hover {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.6);
+            color: #FFD700;
+        }
+
+        #logoftoer img:hover {
+            transform: none;
+            box-shadow: none;
+            filter: none;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600&family=El+Messiri:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body
+    style="margin:0; font-family: sans-serif; background: linear-gradient(to bottom, #022B3A, #1F7A8C); min-height:100vh;">
+    <!-- Demo content above footer -->
+    <div style="height: 100vh; padding: 50px; color: white; text-align: center;">
+        <h1 style="margin-bottom: 20px;">Footer Demo</h1>
+        <p>Scroll down to see the exact footer from provided code (converted to static HTML/CSS, no changes to design)
+        </p>
+    </div>
+
+    <!-- EXACT PROVIDED FOOTER STRUCTURE - JSX converted to HTML, no logic changes -->
+    <footer class="footer-container"
+        style="background: linear-gradient(to bottom, #022B3A, #1F7A8C); font-family: sans-serif;">
+        <div id='logoftoer'>
+            <a href="/" style="cursor: pointer; text-decoration: none;">
+                <!-- Placeholder logo (add /image/flogo.png) -->
+                <div
+                    style="width:280px; height:150px; background: rgba(255,255,255,0.2); border-radius: 10px; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; font-size:24px;">
+                    flogo.png</div>
+            </a>
+        </div>
+
+        <div id='decfooter'>
+            <h2>نقدم سكرابات وأدوات طبية</h2>
+            <h2>بتصميم عصري وخامات مريحة</h2>
+            <h2>تساعدك علي التركيز في شغلك</h2>
+            <h2>بثقة وراحة طوال اليوم</h2>
+            <div id='socal'>
+                <!-- Placeholders (add real images) -->
+                <div
+                    style="width:40px;height:40px;background:#E4405F;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;">
+                    IG</div>
+                <div
+                    style="width:40px;height:40px;background:#000;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;">
+                    TT</div>
+                <div
+                    style="width:40px;height:40px;background:#1877F2;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;">
+                    FB</div>
+            </div>
+        </div>
+
+        <div id='footerlink'>
+            <h2 style="margin-top:35px">روابط مهمة</h2>
+            <p onclick="location.href='/'; window.scrollTo({top:0, behavior:'smooth'});"
+                style="cursor: pointer; color: inherit; text-decoration: none; margin-top: 18px;">الرئيسية</p>
+            <a href="/washing-guide" style="color: inherit; text-decoration: none; cursor: pointer;">
+                <p style="cursor: pointer; line-height: 17px; margin-top: 20px; margin-bottom: 25px">تعلميات الغسيل و
+                    العناية بالاقمشة</p>
+            </a>
+            <a href="/return-policy" style="color: inherit; text-decoration: none; cursor: pointer;">
+                <p style="cursor: pointer;">سياسية الاستبدال والاسترجاع</p>
+            </a>
+        </div>
+
+        <div id='footerconect'>
+            <h2 style="margin-right: 30px;">تواصل معنا</h2>
+            <a href="tel:+9665561235523">
+                <img src="/image/f1.png" alt="phone" id="w1"
+                    onerror="this.style.display='none'; this.nextSibling.style.marginRight=0;" /> 96+ 6551235523
+            </a>
+            <p style="margin-top:5px;">
+                <img src="/image/f2.png" alt="location" id="w1"
+                    onerror="this.style.display='none'; this.nextSibling.style.marginRight=0;" /> ش الأمير نواف بن
+                عبدالعزيز - مركز مزاين
+            </p>
+            <a href="mailto:atlascompany@gmail.com">
+                <img src="/image/f3.png" alt="email" id="w1"
+                    onerror="this.style.display='none'; this.nextSibling.style.marginRight=0;" /> atlascompany@gmail.com
+            </a>
+            <br>
+            <a href="tel:+9665561235523">
+                <img src="/image/f4.png" alt="phone2" id="w1"
+                    onerror="this.style.display='none'; this.nextSibling.style.marginRight=0;" /> 96+ 6551235523
+            </a>
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+            <div class="copyright">
+                <a href="https://atlas-data.sa">
+                    <div
+                        style="width:30px;height:30px;background:#ddd;border-radius:50%;margin-left:-40px;margin-right:10px;">
+                        Atlas</div>
+                </a>
+                2026 <a href="https://atlas-data.sa" style="color: white; text-decoration: none;">أطلس البيانات</a>.
+                جميع الحقوق محفوظة
+            </div>
+            <div class="footer-images" style="padding-left:47px;">
+                <!-- Visa etc placeholders -->
+                <div style="width:40px;height:25px;background:#001F3F;"></div>
+                <div style="width:40px;height:25px;background:#FF6B35;"></div>
+                <div style="width:40px;height:25px;background:#00A651;"></div>
+                <div style="width:40px;height:25px;background:#D62396;"></div>
+                <div style="width:40px;height:25px;background:#000;"></div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

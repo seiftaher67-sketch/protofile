@@ -6,6 +6,7 @@ const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 const revealItems = document.querySelectorAll('.reveal');
 const projectCards = document.querySelectorAll('.project-card[data-url]');
+const socialRow = document.querySelector('.social-row');
 
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'light') {
@@ -73,6 +74,23 @@ projectCards.forEach((card) => {
         }
     });
 });
+
+if (socialRow && socialRow.children.length > 1) {
+    window.setInterval(() => {
+        socialRow.classList.add('is-rotating');
+
+        window.setTimeout(() => {
+            const lastItem = socialRow.lastElementChild;
+            if (lastItem) {
+                socialRow.prepend(lastItem);
+            }
+        }, 220);
+
+        window.setTimeout(() => {
+            socialRow.classList.remove('is-rotating');
+        }, 520);
+    }, 5000);
+}
 
 window.addEventListener('scroll', () => {
     navbar?.classList.toggle('scrolled', window.scrollY > 12);

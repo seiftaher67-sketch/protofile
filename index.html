@@ -1,235 +1,309 @@
-دseif1.jpg
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seif Taher Mohamed - Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Seif Taher Mohamed | Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Seif Taher Mohamed - Frontend Developer focused on React, Vue, JavaScript, HTML, CSS and modern UI/UX.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=El+Messiri:wght@600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600&family=El+Messiri:wght@700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header class="navbar" id="navbar">
-        <nav>
-            <div class="nav-container">
-                <a href="#" class="logo">Portfolio</a>
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <button id="theme-toggle" class="theme-toggle">
-                    <i class="fas fa-moon"></i>
+        <div class="nav-container">
+            <a href="#home" class="logo">Seif Taher</a>
+
+            <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
+                <a href="#home" class="nav-link">الرئيسية</a>
+                <a href="#about" class="nav-link">عني</a>
+                <a href="#skills" class="nav-link">المهارات</a>
+                <a href="#projects" class="nav-link">المشاريع</a>
+                <a href="#contact" class="nav-link">التواصل</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="hamburger" id="hamburger" type="button" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <div class="hero-main">
-                    <h1 class="hero-title hero-delay-1">
-                        <span class="name">Seif Taher Mohamed</span>
-                    </h1>
-                    <p class="name-desc hero-delay-2" id="bio-short">
-                        Frontend Developer specializing in React.js, JavaScript, HTML, CSS & Tailwind CSS. Strong UI/UX
-                        skills and modern web app development.
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <span class="eyebrow">Frontend Developer</span>
+                    <h1>تصميم وتنفيذ واجهات احترافية سريعة وواضحة</h1>
+                    <p class="hero-text">
+                        Seif Taher Mohamed - مطور واجهات أمامية متخصص في React.js وVue وJavaScript وHTML وCSS وTailwind CSS،
+                        مع تركيز على تجربة مستخدم نظيفة وبناء واجهات حديثة قابلة للتوسع.
                     </p>
-                    <div class="hero-buttons hero-delay-3">
-                        <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-eye"></i> View Projects
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-paper-plane"></i> Contact Me
-                        </a>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary"><i class="fas fa-eye"></i> مشاهدة المشاريع</a>
+                        <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> تواصل معي</a>
+                    </div>
+                    <div class="hero-points">
+                        <span><i class="fas fa-bolt"></i> واجهات متجاوبة</span>
+                        <span><i class="fas fa-layer-group"></i> تنظيم واضح</span>
+                        <span><i class="fas fa-sparkles"></i> تفاصيل بصرية دقيقة</span>
                     </div>
                 </div>
-                <div class="hero-image-container">
-                    <img src="seif1.jpg" alt="Seif Taher" class="hero-photo">
+
+                <div class="hero-card reveal">
+                    <div class="portrait-frame">
+                        <img src="seif1.jpg" alt="Seif Taher Mohamed" class="hero-photo">
+                    </div>
+                    <div class="hero-metrics">
+                        <div>
+                            <strong>20+</strong>
+                            <span>مشروع</span>
+                        </div>
+                        <div>
+                            <strong>1+</strong>
+                            <span>سنوات خبرة</span>
+                        </div>
+                        <div>
+                            <strong>8+</strong>
+                            <span>تقنيات أساسية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-kicker">نبذة مختصرة</span>
+                    <h2>عنّي</h2>
+                </div>
+
+                <div class="about-grid">
+                    <article class="panel reveal">
+                        <p>
+                            أنا Seif Taher Mohamed، مطور Frontend أركز على بناء منتجات واضحة ومريحة بصريًا، مع اهتمام
+                            بالتفاصيل، سرعة التصفح، وتنظيم الكود بشكل يسهل تطويره لاحقًا.
+                        </p>
+                        <p>
+                            أعمل على تحويل الأفكار إلى واجهات عملية باستخدام React.js وVue وJavaScript وHTML وCSS وTailwind CSS،
+                            مع مراعاة قابلية الاستخدام والاتساق بين الصفحات.
+                        </p>
+                    </article>
+
+                    <div class="stats-grid reveal">
+                        <div class="stat-card">
+                            <strong>20+</strong>
+                            <span>مشروع منفذ</span>
+                        </div>
+                        <div class="stat-card">
+                            <strong>1+</strong>
+                            <span>سنوات خبرة</span>
+                        </div>
+                        <div class="stat-card">
+                            <strong>UI/UX</strong>
+                            <span>تركيز على التجربة</span>
+                        </div>
+                        <div class="stat-card">
+                            <strong>Clean</strong>
+                            <span>كود منظم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv" class="section cv-section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-kicker">السيرة الذاتية</span>
+                    <h2>CV</h2>
+                </div>
+
+                <div class="cv-grid">
+                    <article class="panel cv-card reveal">
+                        <div class="cv-top">
+                            <div>
+                                <h3>Seif Taher Mohamed Farghaly</h3>
+                                <p>Frontend Developer focused on modern interfaces, responsive layouts, and clean implementation.</p>
+                            </div>
+                            <span class="cv-badge">PDF Resume</span>
+                        </div>
+
+                        <a class="btn btn-primary cv-download" href="CvSeif_Taher_Mohamed_Farghaly.pdf" download>
+                            <i class="fas fa-file-arrow-down"></i> Download CV PDF
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-kicker">ما أستخدمه</span>
+                    <h2>المهارات</h2>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card reveal"><i class="fab fa-react"></i><span>React.js</span></div>
+                    <div class="skill-card reveal"><i class="fab fa-vuejs"></i><span>Vue</span></div>
+                    <div class="skill-card reveal"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                    <div class="skill-card reveal"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                    <div class="skill-card reveal"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                    <div class="skill-card reveal"><i class="fas fa-wind"></i><span>Tailwind CSS</span></div>
+                    <div class="skill-card reveal"><i class="fas fa-server"></i><span>Node.js</span></div>
+                    <div class="skill-card reveal"><i class="fab fa-github"></i><span>Git & GitHub</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-kicker">أعمال مختارة</span>
+                    <h2>المشاريع</h2>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal" data-url="https://rawnaq-six.vercel.app/" tabindex="0"
+                        role="link" aria-label="Open Rawnaq-Abayas project">
+                        <img src="a1.jpg" alt="Rawnaq-Abayas project preview">
+                        <div class="project-body">
+                            <div class="project-top">
+                                <h3>Rawnaq-Abayas</h3>
+                            </div>
+                            <p>واجهة تجارة إلكترونية عصرية بتركيز على العرض الواضح والأنماط المتجاوبة.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-url="https://alfurayj.com/" tabindex="0" role="link"
+                        aria-label="Open Elfreej project">
+                        <img src="a2.jpg" alt="Elfreej project preview">
+                        <div class="project-body">
+                            <div class="project-top">
+                                <h3>Elfreej</h3>
+                            </div>
+                            <p>منصة مزادات سيارات وشاحنات بواجهات عملية وقوائم ديناميكية وتجربة مستخدم واضحة.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-url="https://scrup-wepsite.vercel.app/" tabindex="0"
+                        role="link" aria-label="Open Sccrip project">
+                        <img src="a3.jpg" alt="Sccrip project preview">
+                        <div class="project-body">
+                            <div class="project-top">
+                                <h3>Sccrip</h3>
+                            </div>
+                            <p>Marketplace للأدوات الطبية والخردة بواجهة منظمة وعرض ديناميكي للمنتجات.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-url="https://aqary-eight.vercel.app/" tabindex="0"
+                        role="link" aria-label="Open Aqary project">
+                        <img src="aqary.jpg.jpeg" alt="Aqary project preview">
+                        <div class="project-body">
+                            <div class="project-top">
+                                <h3>Aqary</h3>
+                            </div>
+                            <p>منصة عقارية بواجهة حديثة لعرض الوحدات وتنظيم المحتوى بشكل واضح وسهل التصفح.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal" data-url="https://dash-owner-psi.vercel.app/" tabindex="0"
+                        role="link" aria-label="Open Owner Dashboard project">
+                        <img src="owner.jpg.jpeg" alt="Owner Dashboard project preview">
+                        <div class="project-body">
+                            <div class="project-top">
+                                <h3>Owner Dashboard</h3>
+                            </div>
+                            <p>لوحة تحكم للمالك تركز على إدارة البيانات والمتابعة السريعة داخل واجهة عملية ومنظمة.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-kicker">تواصل مباشر</span>
+                    <h2>التواصل</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <a class="contact-card reveal" href="tel:+201507258135">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <span>هاتف</span>
+                            <strong>01507258135</strong>
+                        </div>
+                    </a>
+                    <a class="contact-card reveal" href="tel:+201158603428">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <span>هاتف</span>
+                            <strong>01158603428</strong>
+                        </div>
+                    </a>
+                    <a class="contact-card reveal" href="mailto:seiftaher67@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span>Email</span>
+                            <strong>seiftaher67@gmail.com</strong>
+                        </div>
+                    </a>
+                    <div class="contact-card reveal">
+                        <i class="fas fa-location-dot"></i>
+                        <div>
+                            <span>الموقع</span>
+                            <strong>Cairo, Egypt</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <div class="container footer-grid">
+            <div class="footer-brand reveal">
+                <h3>Seif Taher Mohamed</h3>
+                <p>Frontend Developer focused on modern interfaces, clean structure, and practical user experiences.</p>
+            </div>
+
+            <div class="footer-column reveal">
+                <h4>تابعني</h4>
+                <div class="social-row">
+                    <a href="https://www.facebook.com/share/1Bi9LGuR3C/" target="_blank" rel="noreferrer"
+                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/201507258135" target="_blank" rel="noreferrer" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://github.com/seiftaher67-sketch" target="_blank" rel="noreferrer"
+                        aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://t.me/seiftaher67" target="_blank" rel="noreferrer" aria-label="Telegram"><i
+                            class="fab fa-telegram"></i></a>
+                    <a href="https://linkedin.com/in/seiftaher67" target="_blank" rel="noreferrer"
+                        aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
 
-
-
-    </xai:function_call>
-
-    <xai:function_call name="edit_file">
-        <parameter name="path">
-            </p>
-
-            </div>
-            </section>
-
-            <section id="about" class="about">
-                <div class="container">
-                    <h2>About Me</h2>
-                    <div class="about-content">
-                        <div class="about-text">
-                            <p>Seif Taher Mohamed - Full Stack Developer skilled in modern web technologies including
-                                React,
-                                Node.js, MongoDB, and more. I specialize in creating responsive, scalable web
-                                applications.</p>
-                            <p>With a passion for clean code and user-centric design, I'm always exploring new
-                                technologies and
-                                best practices to deliver outstanding digital solutions.</p>
-                        </div>
-                        <div class="about-stats">
-                            <div class="stat">
-                                <h3>20+</h3>
-                                <p>Projects</p>
-                            </div>
-                            <div class="stat">
-                                <h3>3+</h3>
-                                <p>Years Exp</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="projects" class="projects">
-                <div class="container">
-                    <h2>My Projects</h2>
-                    <div class="projects-grid">
-                        <div class="project-card" onclick="window.open('https://rawnaq-six.vercel.app/', '_blank')">
-                            <img src="a1.jpg" alt="E-commerce Platform">
-                            <h3 style="padding-left: 60px;">Rawnaq-Abayas</h3>
-                            <p>Frontend with React & Vue
-                                Developed dynamic, responsive interfaces using React and Vue frameworks for smooth user
-                                experience.</p>
-
-                        </div>
-                        <div class="project-card" onclick="window.open('https://alfurayj.com/', '_blank')">
-                            <img src="a2.jpg" alt="Task Management App">
-                            <h3 style="padding-left: 130px;">Elfreej</h3>
-                            <p>Car & Truck Auction Platform
-                                Developed a full-featured auction website for cars and trucks, with dynamic listings,
-                                bidding
-                                system, and responsive interface using React.Vue</p>
-
-                        </div>
-                        <div class="project-card" onclick="window.open('https://scrup-wepsite.vercel.app/', '_blank')">
-                            <img src="a3.jpg" alt="Portfolio">
-                            <h3 style="padding-left: 130px;">Sccrip</h3>
-                            <p>Medical Tools & Scrap Marketplace (React & Vue)
-                                Developed a responsive marketplace for medical tools and scrap materials, integrating
-                                dynamic
-                                product listings and secure user interactions using React and Vue frameworks.</p>
-
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </section>
-
-            <section id="skills" class="skills">
-                <div class="container">
-                    <h2>Skills</h2>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h3>Frontend</h3>
-                            <ul>
-                                <li><i class="fab fa-html5"></i> HTML</li>
-                                <li><i class="fab fa-css3-alt"></i> CSS</li>
-                                <li><i class="fab fa-js-square"></i> JavaScript</li>
-                                <li><i class="fab fa-react"></i> React</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Backend</h3>
-                            <ul>
-                                <li><i class="fab fa-node-js"></i> Node.js</li>
-                                <li><i class="fas fa-database"></i> MongoDB</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h3>Tools</h3>
-                            <ul>
-                                <li><i class="fab fa-git-alt"></i> Git</li>
-                                <li><i class="fab fa-github"></i> GitHub</li>
-                                <li><i class="fab fa-visual-studio-code" style="color: #00D4FF;"></i> VSCode</li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact" class="contact">
-                <div class="container">
-                    <h2>Get In Touch</h2>
-                    <div class="contact-content">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <a href="mailto:seiftaher67@gmail.com">seiftaher67@gmail.com</a>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <a href="tel:+201507258135">01507258135</a>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fab fa-whatsapp"></i>
-                                <a href="https://wa.me/201507258135" target="_blank">Chat on WhatsApp</a>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fab fa-facebook"></i>
-                                <a href="https://www.facebook.com/share/1Bi9LGuR3C/" target="_blank">Facebook</a>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <p>Cairo, Egypt</p>
-                            </div>
-                        </div>
-                        <form class="contact-form" id="contact-form">
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Your Email" required>
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-
-
-            <footer class="footer-container"
-                style="background: linear-gradient(to bottom, #022B3A, #1F7A8C); font-family: sans-serif;">
-                <div id='logoftoer'></div>
-
-                <div id='decfooter'>
-                    <div id='socal'></div>
-                </div>
-
-                <div id='footerlink'></div>
-
-                <div id='footerconect'></div>
-
-                <hr />
-                <div class="footer-bottom">
-                    <div class="social-links"></div>
-                </div>
-
-            </footer>
-
-            <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
